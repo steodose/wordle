@@ -5,9 +5,9 @@ account: steodosescu
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7952229
-bundleId: 6679211
+bundleId: 6680424
 url: https://steodosescu.shinyapps.io/Wordle/
-when: 1672253045.83275
-lastSyncTime: 1672253045.83277
+when: 1672291551.53893
+lastSyncTime: 1672291551.53897
 asMultiple: FALSE
 asStatic: FALSE

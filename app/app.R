@@ -8,6 +8,9 @@ library(htmltools)
 source("wordlist.R")
 
 
+# _________________________________________________________________________________________________
+##### Define UI logic #####
+
 ui <- fluidPage(
   theme = bslib::bs_theme(version = 4),
   title = "Wordle",
@@ -167,9 +170,19 @@ ui <- fluidPage(
             in_button_touch = false;
         }
     });
-  "))
-)
+  ")),
+  hr(style = "border-color: #cbcbcb;"),
+  fluidRow(
+    column(12,
+           p("App created by ", tags$a(href = "https://stephanteodosescu.com",'Stephan Teodosescu', target = '_blank'),", adopted and inspired from Winston Chang", HTML("&bull;"),
+             "Find the code on", tags$a(href = "https://github.com/steodose/wordle", 'Github.', target = '_blank'), style = "font-size: 100%"),
+           p(tags$em("Last updated: Dec 2022"), style = 'font-size:85%')))
+) #END UI function
 
+
+
+# _________________________________________________________________________________________________
+##### Define SERVER logic #####
 
 server <- function(input, output) {
   target_word <- reactiveVal(sample(words_common, 1))
